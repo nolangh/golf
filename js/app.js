@@ -1,15 +1,19 @@
 function getAvailableCourses() {
-	return fetch("https://golf-courses-api.herokuapp.com/courses", {
-		method: "GET",
-	}).then((res) => res.json());
+	let courseOptionsHtml = "";
+	fetch("https://golf-courses-api.herokuapp.com/courses")
+		.then((courses) => {
+			return courses.json();
+		})
+		.then((courses) => {
+			console.log(courses);
+		});
+
+	/*
+	courses.forEach((course) => {
+		courseOptionsHtml += `<option value="${course}">${course.name}</option>`;
+		console.log(courseOptionsHtml);
+	}); */
 }
 
 console.log(getAvailableCourses());
-
-/*let courseOptionsHtml = "";
-courses.forEach((course) => {
-	courseOptionsHtml += `<option value="${course}">${course.name}</option>`;
-	console.log(courseOptionsHtml);
-});
-document.getElementById("course-select").innerHTML = courseOptionsHtml;
-*/
+//document.getElementById("course-select").innerHTML = courseOptionsHtml;
