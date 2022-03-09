@@ -4,6 +4,15 @@
 	box-sizing: border-box;
 }
 
+html {
+	height: 100%;
+}
 body {
+	min-height: 100%;
 	background: coral;
+}
+
+.container {
+	height: 100vh;
+	border: 2px solid black;
 }
