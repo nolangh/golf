@@ -1,19 +1,25 @@
+const myCourses = [];
+
 function getAvailableCourses() {
-	let courseOptionsHtml = "";
 	fetch("https://golf-courses-api.herokuapp.com/courses", {
 		method: "get",
 	})
 		.then((response) => {
 			return response.json();
 		})
+		.then((info) => {
+			console.log(info);
+			myCourses = info; //try seeing if I can declare the variable in this statment
+		})
 		.then(() => {
-			console.log(response);
+			showCourse();
 		});
 }
 
-/*let courseOptionsHtml = '';
-courses.forEach((course) => {
- courseOptionsHtml += `<option value="${course.id}">${course.name}</option>`;
-});
-document.getElementById('course-select').innerHTML = courseOptionsHtml;*/
-getAvailableCourses();
+function showCourse() {
+	let courseOptionsHtml;
+	courseOptionsHtml.forEach((course) => {
+		courseOptionsHtml += `<option value="${course.id}">${course.name}</option>`;
+	});
+	document.getElementById("course-select").innerHTML = courseOptionsHtml;
+}
