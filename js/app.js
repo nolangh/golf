@@ -1,4 +1,4 @@
-import { getAvailableCourses, getCourseImage } from "./functions.js";
+/* import { getAvailableCourses, getCourseImage } from "./functions.js";
 
 getAvailableCourses();
-getCourseImage();
+getCourseImage(); */
