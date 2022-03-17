@@ -1,6 +1,11 @@
 export { getAvailableCourses, getCourseImage };
 
+<<<<<<< HEAD
 // let myCourses = "";
+=======
+let myCourses = "";
+let courseImages = "";
+>>>>>>> 28dcaa1f212644868e0205c3e4648c9973093295
 /* --------------------- ANCHOR request api information --------------------- */
 /*function getAvailableCourses() {
 	fetch("https://golf-courses-api.herokuapp.com/courses")
@@ -34,11 +39,17 @@ function selectCourse() {
 	let courseOptionsHtml = "";
 	myCourses.courses.forEach((course) => {
 		courseOptionsHtml += `<option value="${course.id}">${course.name}</option>`;
+		courseImages += `<h4>${course.name}</h4><img id= 'course-image' src= '${course.image}'>`;
 	});
+<<<<<<< HEAD
 	// document.addEventListener("click", getCourseImage);
+=======
+>>>>>>> 28dcaa1f212644868e0205c3e4648c9973093295
 	document.getElementById("course-select").innerHTML = courseOptionsHtml;
+	document.getElementById("course-image").innerHTML = courseImages; //make the image only populate with an onClick("")
 }
 
+<<<<<<< HEAD
 
 function getCourseImage() {
 	let courseImages = "";
@@ -49,3 +60,7 @@ function getCourseImage() {
 	document.getElementById("course-image").innerHTML = courseImages; //make the image only populate with an onClick("")
 } 
 */
+=======
+/* -------------------- ANCHOR get course image on click -------------------- */
+function getCourseImage() {}
+>>>>>>> 28dcaa1f212644868e0205c3e4648c9973093295
