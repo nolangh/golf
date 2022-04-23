@@ -46,6 +46,7 @@ function selectCourse() {
 	let courseOptionsHtml = "";
 	myCourses.courses.forEach((course) => {
 		courseOptionsHtml += `<option value="${course.id}">${course.name}</option>`;
+		//take course value and use that as an id to find the matching image with a for loop through courses
 		images.src = `${course.image}`;
 	});
 	// document.addEventListener("click", getCourseImage);
