@@ -13,11 +13,12 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="/style/main.css" />
-		<script type="module" src="/js/app.js" async defer></script>
+		<script type="module" src="/js/functions.js" async defer></script>
 	</head>
 	<body>
 		<div class="container">
 			<!-- Main Container-->
+			<!--
 			<div class="row">
 				<div class="col-lg-12" id="header"></div>
 			</div>
@@ -36,11 +37,16 @@
 					</div>
 				</div>
 			</div>
+			-->
+
 			<!-- ANCHOR course select option-->
-			<div class="form-group">
+
+			<div class="form-group content-div">
 				<label for="course-select">Select Course</label>
 				<select class="form-control" id="course-select"></select>
-				<div id="course-image"></div>
+				<div id="course-image">
+					<img id="courseImage" aria-label="Course Image" />
+				</div>
 			</div>
 		</div>
 	</body>

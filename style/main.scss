@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+body {
+	min-height: 100%;
+	background: coral;
+}
+
+.container {
+	height: 100vh;
+	border: 2px solid black;
+
+	.content-div {
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		padding: 0;
+		background: lightpink;
+		width: 100;
+
+		.courseImage {
+			height: 15em;
+			width: 15em;
+		}
+	}
+}
