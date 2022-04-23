@@ -30,11 +30,9 @@ function selectCourse() {
 } */
 
 async function getAvailableCourses() {
-	const apiData = fetch("https://golf-courses-api.herokuapp.com/courses");
+	const apiData = await fetch("https://golf-courses-api.herokuapp.com/courses");
 	console.log(apiData);
-	const response = await apiData.json();
-	const myCourses = await response();
-	console.log(myCourses);
+	const myCourses = await response.json();
 }
 
 getAvailableCourses();
