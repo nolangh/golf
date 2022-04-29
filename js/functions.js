@@ -54,14 +54,7 @@ function selectCourse() {
 	document.getElementById("course-select").innerHTML = courseOptionsHtml;
 	courseImage = pos.options[pos.selectedIndex].value;
 
-<<<<<<< HEAD
-async function getAvailableCourses() {
-	const apiData = await fetch("https://golf-courses-api.herokuapp.com/courses");
-	console.log(apiData);
-	const myCourses = await response.json();
-=======
 	//document.getElementById("course-image").innerHTML = courseImages; //make the image only populate with an onClick("")
->>>>>>> 2dd6908b8353b05b06daa9078fd3aa83d3a692ff
 }
 
 getAvailableCourses();
