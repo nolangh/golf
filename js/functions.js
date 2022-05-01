@@ -44,24 +44,17 @@ function getAvailableCourses() {
 
 function selectCourse() {
 	let courseOptionsHtml = "";
+
 	myCourses.courses.forEach((course) => {
 		courseOptionsHtml += `<option value="${course.id}">${course.name}</option>`;
-		//take course value and use that as an id to find the matching image with a for loop through courses
+
+		console.log(courseOptionsHtml.option);
 		images.src = `${course.image}`;
 	});
 	// document.addEventListener("click", getCourseImage);
 	//courseImages += `<h4>${course.name}</h4><img id= 'course-image' src= '${course.image}'>`;
 	document.getElementById("course-select").innerHTML = courseOptionsHtml;
-	courseImage = pos.options[pos.selectedIndex].value;
-
-<<<<<<< HEAD
-async function getAvailableCourses() {
-	const apiData = await fetch("https://golf-courses-api.herokuapp.com/courses");
-	console.log(apiData);
-	const myCourses = await response.json();
-=======
 	//document.getElementById("course-image").innerHTML = courseImages; //make the image only populate with an onClick("")
->>>>>>> 2dd6908b8353b05b06daa9078fd3aa83d3a692ff
 }
 
 getAvailableCourses();
