@@ -54,6 +54,8 @@ function selectCourse() {
 	// document.addEventListener("click", getCourseImage);
 	//courseImages += `<h4>${course.name}</h4><img id= 'course-image' src= '${course.image}'>`;
 	document.getElementById("course-select").innerHTML = courseOptionsHtml;
+	courseImage = pos.options[pos.selectedIndex].value;
+
 	//document.getElementById("course-image").innerHTML = courseImages; //make the image only populate with an onClick("")
 }
 
